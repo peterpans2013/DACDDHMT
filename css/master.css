@@ -40,6 +40,10 @@ body {
   font-size: 28px;
 }
 
+.game-mute-middle, .mute, .play-pause, .play-again {
+  font-size: 28px !important;
+}
+
 .game-progress  {
   position: absolute;
   bottom: 0;
@@ -51,6 +55,10 @@ body {
   border-radius: 20px;
   color: white;
   background: rgba(0, 0, 0, .75);
+}
+
+input[type="range"] {
+  width:600px;
 }
 
 .rock-input {
