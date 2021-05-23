@@ -27,12 +27,23 @@
 
         <div class="game-details">
           <div class="game-details-left">
-            <h1 class="score">Diem: 0</h1>
-            <h1 class="max-streak">Chuoi max: 0</h1>
+            <h1 class="score">Score: 0</h1>
+            <h1 class="max-streak">Streak: 0</h1>
           </div>
-          <div class="game-details-right">
-            <h1 class="multiplier">Toc do: 1X</h1>
-            <h1 class="streak">Lien tuc: 0</h1>
+          <div class="game-process-middle">
+            <input
+                    class="rock-input"
+                    type="range"
+                    min="0"
+                    max="200"
+                    value="0">
+            <label style="font-size: 28px">SONG PROCESS</label>
+          </div>
+          <div class="game-mute-right">
+            <button class="mute">Mute</button>
+            <button class="play-pause">Pause</button>
+            <button class="play-again">Play Again</button>
+          </div>
           </div>
         </div>
 
@@ -53,30 +64,18 @@
           </ul>
           <ul class="letters">
             <li class="green">A</li>
-            <li class="red">S</li>
             <li class="yellow">D</li>
-            <li class="blue">F</li>
             <li class="orange">G</li>
           </ul>
         </div>
 
         <div class="game-progress">
-          <input
-            class="rock-input"
-            type="range"
-            min="-20"
-            max="20"
-            value="0">
-          </input>
-          <h1 class="rock-header">Rock Meter</h1>
         </div>
       </div>
 
       <div class="game-control-panel">
         <button class="open-instructions">How To Play</button>
         <button class="look-around">Look Around</button>
-        <button class="play-pause hidden">Pause</button>
-        <button class="mute">Mute</button>
       </div>
 
     </div>
