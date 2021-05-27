@@ -36,6 +36,21 @@ body {
   background: rgba(0, 0, 0, .75);
 }
 
+.game-dancing1-gif {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  transform: scale(0.7, 0.7);
+}
+
+
+.game-dancing2-gif {
+  position: absolute;
+  bottom: -22%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+}
+
 .score, .streak, .multiplier, .max-streak {
   font-size: 28px;
 }
