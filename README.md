@@ -1,103 +1,76 @@
-# JS Hero (JavaScript Hero)
-[Live Demo](https://jyschwrtz.github.io/JS-Hero/)
+# PIANO 3D (Powered by JavaScript + Three.js)
 
-JS Hero is musical browser game where the player must time their song playing, through keypresses 'A', 'S', 'D', 'F', 'G', to hit the correct note at the correct time.  Players receive points upon a successful note hit, see their note streak, and a couple other features.  This app was created using Three.js and JavaScript in under a one week deadline.
+## Thông tin nhóm
 
-![game-screenshot](https://raw.githubusercontent.com/jyschwrtz/guitar-hero-design/master/photos/game_play.png)
+#### Tên nhóm: Nhóm CĐT
 
-## Features
-* Play a song on the keyboard (guitar) by pressing keys in time with the music
-* 3D animated notes
-* Button to add view controls to look around the 3D scene
-* Modal with instructions on how to play
+#### Thành viên nhóm:
 
-#### Gameplay
-The hidden complexity of this game occurs in synchronizing the timing of visual, user-input, timing checks, with an imperfect audio track.  The resulting game plays well with minimal issues in the timing throughout.
+| Tên | MSSV | SĐT | Mail |
+| ------------ | ------------- | ------------- | -------------|
+| Nguyễn Hoàng Chiến | 1712301 | 0965584075 | 1712301@student.hcmus.edu.vn |
+| Võ Văn Đạt | 1712337 | 0981652761 | 1712337@student.hcmus.edu.vn |
+| Phạm Hoàng Nhật Thông | 1712171 | 0908363752 | 1712171@student.hcmus.edu.vn |
 
-![gameplay](https://github.com/jyschwrtz/guitar-hero-design/blob/master/gifs/gameplay.gif?raw=true)
+## Thông tin đề tài
 
-#### Look Around (3D Animation in Three.js)
-This was my first attempt working with Three.js after watching a tutorial over the previous weekend.  Designing in 3D and adding in a time element proved to be a challenging but enjoyable process.
+### Tổng quan
+PIANO 3D là một game âm nhạc, người chơi dùng các tổ hợp phím để chọn đúng các note nhạc vào đúng lúc để được điểm tùy vào sự chính xác của note nhạc và sẽ được chơi với các level khó hơn.
+![game-screenshot]()
 
-![look-around](https://github.com/jyschwrtz/guitar-hero-design/blob/master/gifs/look_around.gif?raw=true)
+#### Chức năng
+Người chơi sẽ được thực hiện:
+* Chọn bài nhạc để bắt đầu chơi
+* Click các phím để chơi các note nhạc vào đúng khoảng thời gian nhất định
+* Sẽ được báo noti khi chọn đúng/sai note vào các mức độ thời gian (Miss/Bad/Perfect + Streak)
+* Button “Play Again" + “Mute Song" + “Quit/Stop Song"
+Project sẽ bao gồm:
+* Link tới các thành viên trong nhóm
+* Bảng hướng dẫn cách chơi game
+* 3D animation sử dụng Three.js
 
-#### Song Creation
-Below is a code snippet of the song creation.  Each note object has a measure (m), beat (t), and position (pos) of the note, with an optional hold component.  The set of notes was iterated over to create the various note objects and timing checks through a series of setTimeouts and other checks.
-```
-{m:45, t: 1, pos: 4},
-{m:45, t: 2, pos: 4},
-{m:45, t: 3, pos: 3},
-{m:45, t: 4, pos: 2},
-{m:45, t: 5, pos: 5},
-{m:45, t: 6, pos: 2},
-{m:45, t: 7, pos: 4},
-{m:45, t: 8, pos: 2},
+### Chi tiết
 
-{m:46, t: 1, pos: 3},
-{m:46, t: 2, pos: 3},
-{m:46, t: 3, pos: 2},
-{m:46, t: 4, pos: 1},
-{m:46, t: 5, pos: 5},
-{m:46, t: 6, pos: 3},
-{m:46, t: 7, pos: 4, hold: 2},
-```
+#### Giao diện
+Game sẽ được thể hiện toàn bộ trên 1 trang chức component canvas bao gồm các note nhạc, các button hỗ trợ, các status nhạc, score được thể hiện qua hình sau:
+![gameprototype](./images/prototype.png)
 
-#### Instructions Modal
-The instructions on how to play can be seen below:
+#### Kiến trúc game
+Project sẽ apply các công nghệ sau:
+* Vanilla JavaScript - tạo cấu trúc và game logic
+* Three.js - DOM manipulation và rendering
+* AWS S3 cho hosting các bài nhạc
 
-![instructions](https://raw.githubusercontent.com/jyschwrtz/guitar-hero-design/master/photos/instructions.png)
+## Timeline để thực hiện
 
-## Project Design
-JS Hero was implemented based on the popular console game, Guitar Hero.  Due to a short time-frame, the focus was to get a single song playable and also learn the basics of Three.js in the process, while writing code using OOP design.
+### Day 1 - 3:
+* Nghiên cứu Three.js
+* Setup cơ bản các file webpack, index.html, entry.js
+* Setup scene, camera dựa trên Three.js và làm cho các note nhạc có thể “chạy" từ
+trên xuống
 
-Below is a code snippet from the Audio class demonstrating the OOP design implemented in this project:
-```
-muteMusic() {
-  this.audioPlayerEl.volume = 0;
-  this.muteButton.innerHTML = "Unmute";
-}
+### Day 4 - 7:
+* Tìm hiểu về logic game:
+* Thời gian người chơi click phím match với thời gian của note nhạc trong game
+* Tạo các khung thời gian của các note cho người chơi click
 
-unmuteMusic() {
-  this.audioPlayerEl.volume = 1;
-  this.muteButton.innerHTML = "Mute";
-}
+### Day 8 - 10:
+* Hoàn thành logic game* Thêm các bài nhạc vào game
+* Tạo series các note của 1 bài nhạc và render theo thứ tự bằng Three.js
 
-mute() {
-  const vol = this.audioPlayerEl.volume;
-  return vol > 0 ? this.muteMusic() : this.unmuteMusic();
-}
+### Day 11 - 13:
+Xây dựng các components hỗ trợ cho người chơi:
+* Bảng điểm
+* Thời gian chạy bài nhạc
+* Thông báo Miss/Bad/Perfect + Streak
+* Tạo các button (Play Again, Stop/Quit, Mute) cho game
+* Hoàn thành xong game và xử lý các lỗi xảy ra trong quá trình build game
 
-pauseMusic() {
-  this.audioPlayerEl.pause();
-  this.playing = false;
-  this.playPauseButton.innerHTML = "Play";
-}
+### Day 14:
+* Testing tất cả các chức năng và hoàn thành “trang trí" cho sản phẩm
 
-playMusic() {
-  this.audioPlayerEl.play();
-  this.playing = true;
-  this.playPauseButton.innerHTML = "Pause";
-}
-
-playPause() {
-  return this.playing ? this.pauseMusic() : this.playMusic();
-}
-```
-
-## Technologies
-#### JavaScript
-Vanilla JavaScript was used throughout much of this project.  The object oriented programming aspects were utilized with classes to separate and organize the code.
-
-#### Three.js
-Three.js library was used for all the 3D animation throughout the game.
-
-#### AWS S3
-Amazon Web Services S3 was used to host the song file.
-
-## Additional Resources
-* [Proposal](https://github.com/jyschwrtz/JS-Hero/blob/master/docs/proposal.md)
-
-## Future features
-* More songs
-* Multiple difficulties
-* Allow for song upload and note creation pattern for playback
+## Các chức năng nâng cao có thể phát triển cho game:
+* Điều chỉnh mức độ khó, tốc độ của bài hát
+* 5 note nhạc thay vì 3 note nhạc
+* Cho phép người chơi tự upload bài hát và tự động tạo note cho bài hát đó
+* Online battle giữa các người chơi
