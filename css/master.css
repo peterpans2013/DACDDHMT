@@ -111,12 +111,11 @@ input[type="range"] {
 }
 
 .game-control-panel button {
-  width: 120px;
-  height: 25px;
   border-radius: 7px;
   margin-bottom: 5px;
   border: 1px solid black;
   background: #ffffff;
+  font-size: 28px !important;
 }
 
 .game-control-panel button:hover {
