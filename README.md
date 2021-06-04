@@ -16,7 +16,7 @@
 
 ### Tổng quan
 PIANO 3D là một game âm nhạc, người chơi dùng các tổ hợp phím để chọn đúng các note nhạc vào đúng lúc để được điểm tùy vào sự chính xác của note nhạc và sẽ được chơi với các level khó hơn.
-![game-screenshot]()
+![game-screenshot](./images/game-screenshot.jpg)
 
 #### Chức năng
 Người chơi sẽ được thực hiện:
