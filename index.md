@@ -69,8 +69,8 @@
         </ul>
         <ul class="letters">
             <li class="green">A</li>
-            <li class="yellow">S</li>
-            <li class="orange">D</li>
+            <li class="yellow">D</li>
+            <li class="orange">G</li>
         </ul>
     </div>
 
