@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Talking Tomcat: Piano 3D</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110976475-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110976475-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript" src="lib/bundle.js"></script>
+<div id="game-canvas">
+    <div class="game-display">
+        <div class="header">
+            <p class="creator">Created by <span>CDB Group</span></p>
+            <h1 class="title">Piano 3D in Talking Tomcat</h1>
+        </div>
+
+        <div class="game-details">
+            <div class="game-details-left">
+                <h1 class="score">Score: 0</h1>
+                <h1 class="max-streak">Streak: 0</h1>
+            </div>
+
+            <div class="game-process-middle">
+            </div>
+
+            <div class="game-mute-right">
+                <button class="mute">Mute</button>
+                <button class="play-pause">Pause</button>
+            </div>
+        </div>
+
+        <div class="game-dancing1-gif">
+            <img src="photos/dancing1.gif" alt="dancing girl 1">
+        </div>
+
+        <div class="game-dancing2-gif">
+            <img src="photos/dancing2.gif" alt="dancing girl 2">
+        </div>
+    </div>
+
+    <div class="game-start">
+        <h1 class="start">Nhan "A" de bat dau choi</h1>
+    </div>
+
+    <div class="instructions">
+        <div class="close-instructions">
+            <h1>X</h1>
+            <h2>(Dong huong dan)</h2>
+        </div>
+        <ul class="instructions-text">
+            <h1>Huong dan</h1>
+            <li>Nhan cac nut tu tren xuong theo thu tu de duoc diem</li>
+            <li>Ghi diem lien tuc thi toc do se cang duoc tang len</li>
+            <li>Muon nhin xung quanh, nhan vao nut ben trai duoi man hinh</li>
+        </ul>
+        <ul class="letters">
+            <li class="green">A</li>
+            <li class="yellow">D</li>
+            <li class="orange">G</li>
+        </ul>
+    </div>
+
+    <div class="game-progress">
+    </div>
+</div>
+
+<div class="game-control-panel">
+    <button class="open-instructions">How To Play</button>
+    <button class="look-around">Look Around</button>
+</div>
+
+<div id="song"></div>
+
+<div class="look-around-instructions hidden">
+    <h1>CLICK AND DRAG TO LOOK AROUND</h1>
+</div>
+
+</body>
+</html>
